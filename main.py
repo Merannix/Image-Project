@@ -18,6 +18,7 @@ model = models.load_model('image_classifier.model')
 
 img = cv.imread(r"C:\Users\hepro\Desktop\image recognition\Image-Project\cat.jpg")
 img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+img = cv.resize(img, (32,32))
 
 plt.imshow(img, cmap=plt.cm.binary)
 
